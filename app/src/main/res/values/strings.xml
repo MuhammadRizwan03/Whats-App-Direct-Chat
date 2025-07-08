@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Whats App Direct Message</string>
+    <string name="not_installed">The desired application is not installed on your device</string>
+    <string name="app_description">Send WhatsApp message to unsaved contacts directly.</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="plus">+</string>
+    <string name="wa_number">1234567890</string>
+    <string name="enter_number">Enter the WhatsApp number</string>
+    <string name="message">Enter Your Message Here!</string>
+    <string name="wa_message">Optional message to include which spans more than a single line.</string>
+    <string name="enter_text">Enter your message (optional)</string>
+    <string name="format">Format</string>
+    <string name="paste">Paste</string>
+    <string name="bold">Bold</string>
+    <string name="wa_business">WA Business</string>
+    <string name="whatsapp">WhatsApp</string>
+    <string name="enter_number_warn">Please enter a WhatsApp number first.</string>
+    <string name="invalid_number_warn">Invalid Number Warning!</string>
+
+
+</resources>

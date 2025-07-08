@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context=".activities.MainActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/backgroundColor"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:textColor="@color/white"
+            android:background="#008069"
+            android:textAlignment="center"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:text="Direct WhatsApp Message"
+            android:maxLines="1" />
+
+
+        <TextView
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="8dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="100dp"
+            android:textSize="14sp"
+            android:text="@string/app_description"
+            android:id="@+id/description" />
+
+        <LinearLayout
+            android:layout_marginHorizontal="16dp"
+            tools:ignore="useCompoundDrawables"
+            android:layout_marginTop="24dp"
+
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextAppearance.Material3.TitleSmall"
+                android:textColor="@color/bgColor"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/phone_number"/>
+
+            <ImageView
+                android:contentDescription="@string/paste"
+                tools:visibility="visible"
+                android:visibility="gone"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_fluent_clipboard_paste_20_regular"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                app:tint="@color/primaryMain"
+                android:id="@+id/paste"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginHorizontal="16dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:background="?attr/selectableItemBackground"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:id="@+id/selectCountry">
+
+                <ImageView
+                    android:id="@+id/flag"
+                    android:layout_width="28dp"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@mipmap/in"
+                    tools:ignore="ImageContrastCheck" />
+
+                <TextView
+                    style="@style/TextAppearance.Material3.BodyLarge"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/plus" />
+
+                <TextView
+                    app:drawableEndCompat="@drawable/ic_fluent_chevron_down_20_regular"
+                    android:drawablePadding="8dp"
+                    style="@style/TextAppearance.Material3.BodyLarge"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/isdCode"
+                    tools:text="92" />
+            </LinearLayout>
+
+            <EditText
+                style="@style/TextAppearance.Material3.BodyLarge"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginStart="8dp"
+                android:minHeight="48dp"
+                android:hint="@string/enter_number"
+                android:importantForAutofill="no"
+                android:id="@+id/waNumber"
+                android:inputType="phone"
+                android:maxLines="1" />
+
+        </LinearLayout>
+
+        <TextView
+            android:text="@string/message"
+            style="@style/BodyHeader" />
+
+        <EditText
+            style="@style/TextAppearance.Material3.BodyLarge"
+            android:layout_marginHorizontal="16dp"
+            android:gravity="bottom"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:maxHeight="120dp"
+            android:minHeight="48dp"
+            android:hint="@string/enter_text"
+            android:inputType="text|textMultiLine"
+            android:scrollHorizontally="false"
+            android:importantForAutofill="no"
+            android:id="@+id/optionalMessage" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_margin="16dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical|end"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/sendButtons">
+
+            <com.google.android.material.button.MaterialButton
+                app:icon="@drawable/ic_fluent_send_20_regular"
+                android:layout_marginStart="16dp"
+                android:backgroundTint="#325666"
+                android:layout_marginEnd="4dp"
+                android:text="@string/wa_business"
+                android:id="@+id/send_business"
+                style="@style/SendButtons" />
+
+            <com.google.android.material.button.MaterialButton
+                app:icon="@drawable/ic_fluent_send_20_regular"
+                android:backgroundTint="#008069"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/whatsapp"
+                style="@style/SendButtons"
+                android:id="@+id/send" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
