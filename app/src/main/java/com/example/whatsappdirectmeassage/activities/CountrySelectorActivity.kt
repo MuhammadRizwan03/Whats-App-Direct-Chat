@@ -7,6 +7,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.whatsappdirectmeassage.adapters.CountriesAdapter
 import com.example.whatsappdirectmeassage.databinding.ActivityCountrySelectBinding
+import com.example.whatsappdirectmeassage.utils.countries
 import com.example.whatsappdirectmeassage.utils.deviceDefaultCountry
 import com.example.whatsappdirectmeassage.utils.loadSvgImage
 
@@ -20,7 +21,7 @@ class CountrySelectorActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-//        binding.counter.text = countries.size.toString()
+        binding.counter.text = countries.size.toString()
         binding.recycler.adapter = adapter
 
         binding.scroller.attachRecyclerView(binding.recycler)

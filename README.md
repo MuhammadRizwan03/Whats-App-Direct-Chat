@@ -30,6 +30,19 @@ This Android app displays a list of countries with their flags, names, and phone
   }
 ]
 ```
+
+### 📸 Screenshots
+
+#### 🔹 Direct Chat
+![Direct Chat](screen_shots/Screenshot_20250708_120532.jpg)
+
+#### 🔹 Country Picker with Flags
+![Country Picker](screen_shots/Screenshot_20250708_120616.jpg)
+
+#### 🔹 Optional Message Input
+![Message Input](screen_shots/Screenshot_20250708_120655.jpg)
+
+
 ## 💬 Direct Chat Feature (WhatsApp Integration)
 
 This app includes a powerful **Direct Chat** feature that enables users to start a WhatsApp or WhatsApp Business conversation **without saving the number** to contacts.
