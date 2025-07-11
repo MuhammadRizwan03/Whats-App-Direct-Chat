@@ -18,8 +18,8 @@ val countries: List<Country> = loadCountriesFromAssets(MyApplication.getAppConte
 private fun getDefaultCountry(): Country? {
     val deviceCountryNameCode = Locale.getDefault().country
     for (country in countries) {
-        Log.e("jhsdkfhsd", "getDefaultCountry: $deviceCountryNameCode", )
-        Log.e("jhsdkfhsd", "getDefaultCountry: ${country.phone_code}", )
+        Log.e("jhsdkfhsd", "getDefaultCountry: $deviceCountryNameCode")
+        Log.e("jhsdkfhsd", "getDefaultCountry: ${country.phone_code}")
         if (country.name_code.lowercase() == deviceCountryNameCode.lowercase()) return country
     }
     return null

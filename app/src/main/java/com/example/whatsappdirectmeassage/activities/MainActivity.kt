@@ -122,7 +122,7 @@ class MainActivity : AppCompatActivity() {
             return
         }
 
-        val cleanedNumber = rawInput.replace(Regex("[^\\d]"), "")
+        val cleanedNumber = rawInput.replace(Regex("\\D"), "")
         if (cleanedNumber.length < 7) {
             createToast(R.string.invalid_number_warn)
             return
@@ -133,6 +133,7 @@ class MainActivity : AppCompatActivity() {
         Log.d("sendClicked", "Formatted Number: $phoneNumberWithIsd")
         getLaunchIntent(phoneNumberWithIsd, message, business).launchIfResolved(this)
     }
+
     /*override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         outState.putInt("country", countries.indexOf(selectedCountry))

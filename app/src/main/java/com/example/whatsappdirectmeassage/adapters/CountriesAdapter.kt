@@ -1,16 +1,11 @@
 package com.example.whatsappdirectmeassage.adapters
 
-//import com.example.whatsappdirectmeassage.models.countries
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import coil.ImageLoader
-import coil.decode.SvgDecoder
-import coil.request.ImageRequest
-import com.example.whatsappdirectmeassage.activities.MyApplication
 import com.example.whatsappdirectmeassage.databinding.CountryListItemBinding
 import com.example.whatsappdirectmeassage.utils.countries
 import com.example.whatsappdirectmeassage.utils.loadSvgImage
@@ -21,8 +16,6 @@ class CountriesAdapter(
 ) :
     RecyclerView.Adapter<CountriesAdapter.CountryHolder>(),
     FastScroller.SectionIndexer {
-
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CountryHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -41,15 +34,6 @@ class CountriesAdapter(
 //        holder.flag.load(country.flag_url)
         holder.countryName.text = name
         holder.isdCode.text = code
-
-
-//        val request = ImageRequest.Builder(holder.itemView.context)
-//            .data(country.flag_url)
-//            .crossfade(true)
-//            .target(holder.flag)
-//            .build()
-//
-//        MyApplication.getImageLoader().enqueue(request)
 
         holder.flag.loadSvgImage(country.flag_url)
 

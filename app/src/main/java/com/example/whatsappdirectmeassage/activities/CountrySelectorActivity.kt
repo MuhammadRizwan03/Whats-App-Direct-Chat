@@ -51,15 +51,6 @@ class CountrySelectorActivity : AppCompatActivity() {
         binding.deviceDefault.countryName.text = name
         binding.deviceDefault.countryCode.text = dialingCode
         binding.deviceDefault.flag.loadSvgImage(deviceCountry.flag_url)
-//
-//        val request = ImageRequest.Builder(this)
-//            .data(deviceCountry.flag_url)
-//            .crossfade(true)
-//            .target(binding.deviceDefault.flag)
-//            .build()
-//        MyApplication.getImageLoader().enqueue(request)
-
-
         binding.deviceDefault.root.setOnClickListener { countrySelected(position = -1) }
     }
 

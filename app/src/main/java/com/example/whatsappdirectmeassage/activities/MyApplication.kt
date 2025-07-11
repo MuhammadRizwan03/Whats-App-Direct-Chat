@@ -27,7 +27,4 @@ class MyApplication : Application() {
 
         fun getImageLoader() = this@Companion.instance.imageLoader
     }
-
-
-
 }
